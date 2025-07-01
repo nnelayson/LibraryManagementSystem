@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <link rel="icon" href="C:\Users\jayson\Documents\TrainingJS\LibraryManagementSystem\icon\male_icon.png" type="image/png">
+        <div class="form-container">
+            <form id="registerForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="number" id="phone" placeholder="Phone Number" max = "11" min = "1" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="city" placeholder="City" required>
+                <input type="text" id="dob" placeholder="Date of Birth (YYYY-MM-DD)" required>
+                <button type="submit">Register</button>
+                <button> <a href="homepage.html"> Homepage </button>
+            </form>
+
+        </div>
+
+</body>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const userData = {
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('city').value,
+            dob: document.getElementById('dob').value
+        };
+
+        console.log(userData);
+        alert("Registration successful!");
+    });
+</script>
+<style> 
+
+   
+</style>
+</body>
+</html>
